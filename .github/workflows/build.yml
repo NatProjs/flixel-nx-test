@@ -25,6 +25,7 @@ jobs:
         haxelib git ammer https://github.com/retronx-team/switch-ammer
         haxelib install openfl
         haxelib --never install flixel 4.11.0
+        haxelib install lime
         haxelib run lime setup flixel
         haxelib run lime setup
         haxelib install flixel-tools 1.5.1
@@ -34,7 +35,6 @@ jobs:
         haxelib set flixel-tools 1.5.1
         haxelib set flixel-ui 2.5.0
         haxelib set flixel-addons 2.11.0
-        haxelib install lime
           
     - name: build flixel-nx
       run: | 
