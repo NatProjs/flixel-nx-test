@@ -43,6 +43,9 @@ SOURCES		:=	wrapper_src
 DATA		:=	data
 INCLUDES	:=	build.haxe/include
 #ROMFS	:=	romfs
+APP_TITLE   := HaxeFlixel NX Test
+APP_AUTHOR  := natifyyy
+
 
 HAXE_LIBMAIN := build.haxe/libMain.a
 HXCPP := `haxelib path hxcpp | head -n 1`

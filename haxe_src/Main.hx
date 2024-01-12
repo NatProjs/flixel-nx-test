@@ -1,9 +1,17 @@
 import libnx.Console;
 import libnx.Applet;
 import libnx.Hid;
+import flixel.FlxGame;
+import openfl.display.Sprite;
 
-class Main
+class Main extends Sprite
 {
+	public function new()
+    {
+        super();
+        addChild(new FlxGame(0, 0, PlayState));
+    }
+
     static public function main() : Void
     {
         // Initialize console
