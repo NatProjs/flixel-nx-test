@@ -13,14 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     container: devkitpro/devkita64
     steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+
+    - uses: krdlab/setup-haxe@master
+      with:
+      haxe-version: 4.2.5
   
     - name: install haxe and shii
       run: | 
-        sudo add-apt-repository ppa:haxe/releases -y
-        sudo apt-get update
-        sudo apt-get install haxe -y
-        mkdir ~/haxelib && haxelib setup ~/haxelib
+        haxelib setup ~/haxelib
         haxelib git hxcpp https://github.com/retronx-team/switch-hxcpp
         haxelib git ammer https://github.com/retronx-team/switch-ammer
         haxelib install openfl
